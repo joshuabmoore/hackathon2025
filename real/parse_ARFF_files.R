@@ -6,7 +6,7 @@ directories <- list.dirs(path = "./", full.names = TRUE, recursive = TRUE)
 # Remove non-folders
 directories <- directories[directories != "./"]
 
-# Helper function
+# Helper function (copied from Trent, thank you Trent)
 
 tidy_arff_files <- function(x){
   
