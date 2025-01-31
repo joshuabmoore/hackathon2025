@@ -6,6 +6,13 @@ directories <- list.dirs(path = "./", full.names = TRUE, recursive = TRUE)
 # Remove non-folders
 directories <- directories[directories != "./"]
 
+# datapath for output
+data_path <- getwd()
+output_data_path <- glue("{data_path}/preprocessed_TS/")
+
+# Make output data path if needed
+icesTAF::mkdir(output_data_path)
+
 # Helper function (copied from Trent, thank you Trent)
 
 tidy_arff_files <- function(x){
